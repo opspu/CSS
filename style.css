@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+
+.flex{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+figure.photo{
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    min-width: 220px;
+    max-width: 310px;
+    max-height: 220px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+figure.photo *{
+    box-sizing: border-box;
+    transition: all .4s ease-in-out;
+}
+
+figure.photo img{
+    max-width: 100%;
+    position: relative;
+    opacity: 0.4;
+    display: block;
+}
+
+figure.photo figcaption{
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+}
+
+figure.photo h2{
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    display: inline-block;
+    background: #000;
+    transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
+    padding: 12px 5px;
+    margin: 0;
+    top: 50%;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+figure.photo h2 span{
+    font-weight: 800;
+}
+
+figure.photo::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left:0;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+    transform: rotate(200deg) translate(-50%);
+}
+
+figure.photo a{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    z-index: 1;
+}
+
+figure.photo.red {
+    background: #5c0f1b;
+}
+
+figure.photo.red h2{
+    background: #330608;
+}
+
+figure.photo.blue{
+    background: #022842;
+}
+
+figure.photo.blue h2{
+    background: #031724;
+}
+
+figure.photo.yellow{
+    background: #525d28;
+}
+
+figure.photo.yellow h2 {
+    background: #5b6811;
+}
+
+figure.photo:hover img,
+figure.photo.hover img{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+figure.photo:hover h2,
+figure.photo.hover h2{
+    transform: skew(-10deg) rotation(-10deg) translate(-150%,-50%);
+}
+
+figure.photo:hover::before,
+.figure.photo.hover::before{
+    transform: rotate(110deg) translateY(-150%);
+}
